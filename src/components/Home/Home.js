@@ -266,8 +266,13 @@ const ValueCard = styled.div`
     rgba(255, 75, 167, 1) 0%,
     rgba(255, 218, 71, 1) 100%
   );
+  transition: transform 0.2s;
   padding: 24px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 const ValueText = styled.p`
   margin: 0;

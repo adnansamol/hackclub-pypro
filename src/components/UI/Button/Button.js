@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Button = ({ children, color, bgColor, size, onClick }) => {
   const Component = styled.button`
@@ -15,6 +15,10 @@ const Button = ({ children, color, bgColor, size, onClick }) => {
     font-weight: 600;
     color: ${color};
     cursor: pointer;
+    transition: transform 0.1s;
+    &:hover {
+      transform: scale(1.05);
+    }
   `;
   return <Component onClick={onClick}>{children}</Component>;
 };
