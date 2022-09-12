@@ -23,7 +23,8 @@ const Home = () => {
         <BannerMask>
           <TextContainer>
             <TagLine>
-              Welcome to <span style={{ color: "#f54254" }}>Hack Club</span>{" "}
+              Welcome to <br />
+              <span style={{ color: "#f54254" }}>Hack Club</span>{" "}
               <span style={{ color: "#42eff5" }}>PyPro</span>!<br />
             </TagLine>
             <TagLine>
@@ -154,50 +155,51 @@ const BannerMask = styled.div`
   flex-direction: column;
   height: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   @media (max-width: 400px) {
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-left: 18px;
+    justify-content: space-around;
+    align-items: center;
   }
 `;
 const TextContainer = styled.p`
   display: flex;
-  width: 80%;
+  width: 40%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  text-align: center;
+  gap: 2em;
+  margin-top: 50px;
   @media (max-width: 400px) {
-    text-align: center;
-    margin-left: 0;
-    width: 100%;
+    width: 90%;
   }
 `;
 const TagLine = styled.p`
   margin: 0;
-  font-size: 60px;
+  font-size: 72px;
   color: white;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   font-family: "Righteous";
+  &:last-child {
+    font-size: 56px;
+  }
   @media (max-width: 400px) {
-    font-size: 48px;
+    font-size: 56px;
+    &:last-child {
+      font-size: 36px;
+    }
   }
 `;
 const ButtonContainer = styled.div`
-  position: absolute;
   display: flex;
-  margin-top: 24em;
   gap: 50px;
-
   @media (max-width: 400px) {
     width: 100%;
     flex-direction: column;
     gap: 24px;
     width: 100%;
     align-items: center;
-    position: relative;
     margin-top: 0;
     margin-bottom: 24px;
   }
